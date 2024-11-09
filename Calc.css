@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a4452;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #2d2f36;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+#inputBox {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #1e1f25;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 2.5rem;
+    text-align: right;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+.calculator > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+button {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #3a4452;
+    color: #ffffff;
+    box-shadow: -8px -8px 15px rgba(225, 225, 225, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b5260;
+}
+
+.equalBtn {
+    background-color: #fb7c14;
+}
+
+.operator {
+    color: green;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 90%;
+    }
+
+    #inputBox {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        max-width: 100%;
+    }
+
+    #inputBox {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    #inputBox {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
